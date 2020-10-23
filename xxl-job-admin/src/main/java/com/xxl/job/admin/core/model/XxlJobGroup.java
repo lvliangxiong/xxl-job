@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
+ * 执行器集群
  * Created by xuxueli on 16/9/30.
  */
 public class XxlJobGroup {
@@ -17,8 +18,9 @@ public class XxlJobGroup {
 
     // registry list
     private List<String> registryList;  // 执行器地址列表(系统注册)
+
     public List<String> getRegistryList() {
-        if (addressList!=null && addressList.trim().length()>0) {
+        if (addressList != null && addressList.trim().length() > 0) {
             registryList = new ArrayList<String>(Arrays.asList(addressList.split(",")));
         }
         return registryList;
