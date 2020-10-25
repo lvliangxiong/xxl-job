@@ -17,9 +17,10 @@ public class XxlJobGroup {
     private String addressList;     // 执行器地址列表，多地址逗号分隔(手动录入)
 
     // registry list
-    private List<String> registryList;  // 执行器地址列表(系统注册)
+    private List<String> registryList;  // 执行器地址列表(系统注册)，只有 get 方法，没有 set 方法
 
     public List<String> getRegistryList() {
+        // registryList 是从 addressList 解析出来的
         if (addressList != null && addressList.trim().length() > 0) {
             registryList = new ArrayList<String>(Arrays.asList(addressList.split(",")));
         }

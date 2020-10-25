@@ -19,9 +19,16 @@ public class WebMvcConfig implements WebMvcConfigurer {
     @Resource
     private CookieInterceptor cookieInterceptor;
 
+    /**
+     * 添加拦截器
+     *
+     * @param registry
+     */
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(permissionInterceptor).addPathPatterns("/**");
+        registry.addInterceptor(permissionInterceptor).addPathPatterns("/**")
+                /*不拦截 static 目录下的静态资源*/
+                .excludePathPatterns("/static/**");
         registry.addInterceptor(cookieInterceptor).addPathPatterns("/**");
     }
 

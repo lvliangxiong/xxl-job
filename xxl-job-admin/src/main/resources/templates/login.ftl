@@ -11,6 +11,7 @@
 		<div class="login-logo">
 			<a><b>XXL</b>JOB</a>
 		</div>
+		<#--这里使用的是 Ajax 进行登录，登录成功之后-->
 		<form id="loginForm" method="post" >
 			<div class="login-box-body">
 				<p class="login-box-msg">${I18n.admin_name}</p>
@@ -39,6 +40,7 @@
 	</div>
 <@netCommon.commonScript />
 <script src="${request.contextPath}/static/adminlte/plugins/iCheck/icheck.min.js"></script>
+<#--这里是发送 login Ajax 请求的 js 文件-->
 <script src="${request.contextPath}/static/js/login.1.js"></script>
 
 </body>

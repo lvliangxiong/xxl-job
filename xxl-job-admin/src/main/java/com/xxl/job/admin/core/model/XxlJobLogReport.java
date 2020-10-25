@@ -2,6 +2,9 @@ package com.xxl.job.admin.core.model;
 
 import java.util.Date;
 
+/**
+ * 任务执行报表
+ */
 public class XxlJobLogReport {
 
     private int id;
